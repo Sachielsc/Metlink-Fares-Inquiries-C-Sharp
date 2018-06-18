@@ -121,16 +121,12 @@ namespace TestMetlink.Test
 			}
 		}
 
-		// remember to edit this path when the path of root folder is changed
-		public string dataPath = TestContext.CurrentContext.TestDirectory;
-
 		/// <summary>
 		/// Quit the ChromeDriver and Flush the Reporter.
 		/// </summary>
 		[TearDown]
 		public void CleanUp()
 		{
-			ReportLog.Log(dataPath);
             ReportLog.Flush();
 		}
 	}

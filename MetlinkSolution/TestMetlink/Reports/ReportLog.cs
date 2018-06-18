@@ -123,7 +123,7 @@ namespace TestMetlink.Reports
             ITakesScreenshot takeScreenshot = (ITakesScreenshot)driver;
             Screenshot screenshot = takeScreenshot.GetScreenshot();
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            string finalpath = path + "..\\..\\..\\..\\TestVault\\TestResults\\ErrorScreenshots\\" + filename + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + ".png";
+            string finalpath = path + "..\\..\\..\\..\\MetlinkSolution\\TestResults\\ErrorScreenshots\\" + filename + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + ".png";
             screenshot.SaveAsFile(finalpath);
             return finalpath;
         }
@@ -154,14 +154,14 @@ namespace TestMetlink.Reports
         /// <returns>New HTML Reporter</returns>
         private static ExtentHtmlReporter GetHtmlReporter()
         {
-            var dir = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\..\\..\\TestVault\\TestResults/"; /* Tips! */
+            var dir = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\..\\..\\MetlinkSolution\\TestResults/"; /* Tips! */
             var fileName = "ReportByExtentReports.html";
             htmlReporter = new ExtentHtmlReporter(dir + fileName);
             htmlReporter.Configuration().ChartVisibilityOnOpen = true;
             htmlReporter.Configuration().ChartLocation = ChartLocation.Top;
             htmlReporter.Configuration().DocumentTitle = "Automation Report";
             htmlReporter.Configuration().Theme = Theme.Dark;
-            htmlReporter.Configuration().ReportName = "Vault Event Tests";
+            htmlReporter.Configuration().ReportName = "Metlink Event Tests";
 
             return htmlReporter;
         }
