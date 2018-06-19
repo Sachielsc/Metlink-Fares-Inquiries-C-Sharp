@@ -14,14 +14,12 @@ namespace TestMetlink.Test.DataDriven
 	/// </summary>
 	public static class TestData
 	{
-		public static IEnumerable CredentialsExcel
+		public static IEnumerable DataDrivenTest1
 		{
 			get
 			{
-				/// <remarks>
-				/// call the method ReadXlsxDataDriveFile() from its definitions:
-				/// public static IEnumerable<TestCaseData> ReadXlsxDataDriveFile(string path, string sheetName, [Optional] string[] diffParam, [Optional] string testName)
-				/// </remarks>
+				// call the method ReadXlsxDataDriveFile() from its definitions:
+				// public static IEnumerable<TestCaseData> ReadXlsxDataDriveFile(string path, string sheetName, [Optional] string[] diffParam, [Optional] string testName)
 				return DataDrivenHelper.ReadXlsxDataDriveFile(ConfigurationManager.AppSettings["DataDrivenFileXlsx"], "Journey1", new[] { "fromLocation", "toLocation" }, "Journey1Test");
 			}
 		}
