@@ -128,7 +128,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
     <None Include="ExternalData\journey_list.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
